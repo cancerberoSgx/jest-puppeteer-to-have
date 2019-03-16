@@ -29,8 +29,7 @@
     "pack-examples": "npx fs-to-json --input src/examples/toPack/**/* --output src/examples/examplesPacked.json",
     "pack-files": "mkdir -p ./src/util/filesPacked && npx embed-json-in-ts --mode string --input \"filesPacked/*\" --output \"./src/util/filesPacked\" --preserveExtension --debug"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/expect-puppeteer": "^3.3.1",
     "@types/jest": "^24.0.6",
