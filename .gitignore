@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+.cache
+*.log
+tmp
+bkps
+docs
+docs/*.gz
+src-removeme
