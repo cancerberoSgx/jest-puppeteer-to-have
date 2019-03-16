@@ -1,5 +1,6 @@
 # jest-puppeteer-to-have
-custom matcher for jest-puppeteer
+
+DOM selection rule-them-all, jest-puppeteer custom matcher. 
 
 Motivation:
 * have a rule-them-all matcher to assert on DOM so we can build more abstract/semantic matchers based on it
