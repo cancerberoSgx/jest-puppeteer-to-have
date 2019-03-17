@@ -1,6 +1,6 @@
-import { Page } from 'puppeteer'
-import { shorter } from '../util'
-import { ToHaveOptions, TextCompareOptions, ExtractAs } from './types'
+import {Page} from 'puppeteer'
+import {shorter} from '../util'
+import {ToHaveOptions, TextCompareOptions, ExtractAs} from './types'
 
 declare global {
   namespace jest {
@@ -37,6 +37,7 @@ function buildValue(text: string, options: TextCompareOptions) {
   }
   return text
 }
+
 export class ToHave {
   constructor(protected context: jest.MatcherUtils) {}
 
@@ -44,7 +45,7 @@ export class ToHave {
     if (options.waitFor) {
       const waitForSelector = typeof options.waitFor === 'string' ? options.waitFor : options.selector
       try {
-        await page.waitFor(waitForSelector, { hidden: this.context.isNot })
+        await page.waitFor(waitForSelector, {hidden: this.context.isNot})
       } catch (error) {
         return {
           pass: false,
