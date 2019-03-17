@@ -60,13 +60,21 @@ API
 
 ### ToHaveOptions
 
-*   [ToHaveOptions (html)](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_tohave_types_.tohaveoptions.html)
-*   [ToHaveOptions (markdown)](docs/api-md/interfaces/_tohave_types_.tohaveoptions.md)
+*   [HTML](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_tohave_types_.tohaveoptions.html)
+*   [Markdown](docs/api-md/interfaces/_tohave_types_.tohaveoptions.md)
+*   [TypeScript declarations](src/toHave/types.ts)
 
 ### ToEditOptions
 
 *   [ToEditOptions (html)](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_toedit_types_.toeditoptions.html)
 *   [ToEditOptions (markdown)](docs/api-md/interfaces/_toedit_types_.toeditoptions.md)
+*   [TypeScript declarations](src/toEdit/types.ts)
+
+### ToTriggerOptions
+
+*   [HTML](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_totrigger_types_.totriggeroptions.html)
+*   [HTML](docs/api-md/interfaces/_totrigger_types_.totriggeroptions.md)
+*   [TypeScript declarations](src/toTrigger/types.ts)
 
 TODO / IDEAS / QUESTIONS
 ------------------------

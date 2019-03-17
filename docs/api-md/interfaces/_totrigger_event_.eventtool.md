@@ -2,6 +2,8 @@
 
 # Interface: EventTool
 
+*__internal__*: 
+
 ## Hierarchy
 
 **EventTool**
@@ -24,7 +26,7 @@
 
 ▸ **check**(el: *`Element`*, checked: *`boolean`*): `void`
 
-*Defined in [toTrigger/event.ts:111](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L111)*
+*Defined in [toTrigger/event.ts:110](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L110)*
 
 **Parameters:**
 
@@ -42,7 +44,7 @@ ___
 
 ▸ **fireEvent**(node: *`Element`*, eventName: *[FireEventNames](../modules/_totrigger_event_.md#fireeventnames)*): `void`
 
-*Defined in [toTrigger/event.ts:109](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L109)*
+*Defined in [toTrigger/event.ts:108](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L108)*
 
 **Parameters:**
 
@@ -60,7 +62,7 @@ ___
 
 ▸ **select**(el: *`Element`*, values: *`string`[] \| `string`*): `void`
 
-*Defined in [toTrigger/event.ts:110](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L110)*
+*Defined in [toTrigger/event.ts:109](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L109)*
 
 **Parameters:**
 

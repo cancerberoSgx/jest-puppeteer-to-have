@@ -28,7 +28,7 @@
 
 **● check**: *`undefined` \| `false` \| `true`*
 
-*Defined in [toTrigger/types.ts:8](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L8)*
+*Defined in [toTrigger/types.ts:8](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L8)*
 
 ___
 <a id="clearalltext"></a>
@@ -37,7 +37,7 @@ ___
 
 **● clearAllText**: *`undefined` \| `false` \| `true`*
 
-*Defined in [toTrigger/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L12)*
+*Defined in [toTrigger/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L12)*
 
 clears all the text in a textarea, input, contentEditable, etc
 
@@ -48,7 +48,7 @@ ___
 
 **● enterText**: *`undefined` \| `string`*
 
-*Defined in [toTrigger/types.ts:14](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L14)*
+*Defined in [toTrigger/types.ts:14](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L14)*
 
 enters text in a textarea, input, contentEditable
 
@@ -59,7 +59,7 @@ ___
 
 **● event**: *[FireEventNames](../modules/_totrigger_event_.md#fireeventnames)*
 
-*Defined in [toTrigger/types.ts:7](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L7)*
+*Defined in [toTrigger/types.ts:7](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L7)*
 
 ___
 <a id="select"></a>
@@ -68,7 +68,7 @@ ___
 
 **● select**: *`string` \| `string`[]*
 
-*Defined in [toTrigger/types.ts:5](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L5)*
+*Defined in [toTrigger/types.ts:5](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L5)*
 
 ___
 <a id="selectalltext"></a>
@@ -77,7 +77,7 @@ ___
 
 **● selectAllText**: *`undefined` \| `false` \| `true`*
 
-*Defined in [toTrigger/types.ts:10](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L10)*
+*Defined in [toTrigger/types.ts:10](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L10)*
 
 select all text in a textarea, input, contentEditable, etc
 
@@ -88,7 +88,7 @@ ___
 
 **● selector**: *`string`*
 
-*Defined in [toTrigger/types.ts:6](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/types.ts#L6)*
+*Defined in [toTrigger/types.ts:6](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/types.ts#L6)*
 
 ___
 

@@ -31,7 +31,7 @@
 
 **Ƭ FireEventNames**: *"mousedown" \| "mouseup" \| "click" \| "focus" \| "change" \| "blur" \| "select" \| "input"*
 
-*Defined in [toTrigger/event.ts:5](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L5)*
+*Defined in [toTrigger/event.ts:5](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L5)*
 
 ___
 
@@ -47,7 +47,7 @@ ${eventTools.toString()}
 )()
 `
 
-*Defined in [toTrigger/event.ts:103](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L103)*
+*Defined in [toTrigger/event.ts:100](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L100)*
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **asArray**<`T`>(selectors: *`T` \| `T`[]*): `T`[]
 
-*Defined in [toTrigger/event.ts:1](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L1)*
+*Defined in [toTrigger/event.ts:1](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L1)*
 
 **Type parameters:**
 
@@ -79,7 +79,7 @@ ___
 
 ▸ **eventTools**(): `object`
 
-*Defined in [toTrigger/event.ts:7](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L7)*
+*Defined in [toTrigger/event.ts:7](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/d35cf7c/src/toTrigger/event.ts#L7)*
 
 **Returns:** `object`
 
