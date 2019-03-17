@@ -1,5 +1,5 @@
 import '../toHave'
-import '../../toEdit/to'
+import '../../toEdit/toEdit'
 
 describe('toHave', () => {
   beforeAll(async () => {

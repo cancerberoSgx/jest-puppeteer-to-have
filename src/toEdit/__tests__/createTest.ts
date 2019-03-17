@@ -1,5 +1,5 @@
 import '../../toHave/toHave'
-import '../to'
+import '../toEdit'
 
 describe('toHave selectors', () => {
   beforeAll(async () => {
