@@ -25,7 +25,7 @@
 
 **● name**: *`string`*
 
-*Defined in [toHave/types.ts:33](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L33)*
+*Defined in [toHave/types.ts:33](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L33)*
 
 ___
 <a id="value"></a>
@@ -34,7 +34,7 @@ ___
 
 **● value**: *`string`*
 
-*Defined in [toHave/types.ts:34](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L34)*
+*Defined in [toHave/types.ts:34](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L34)*
 
 ___
 

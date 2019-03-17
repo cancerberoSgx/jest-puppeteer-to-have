@@ -46,7 +46,6 @@ export class ToHave {
     options: ToHaveOptions,
     r: string | EvaluateResultElement[],
   ): Promise<jest.CustomMatcherResult | undefined> {
-
     if (typeof r === 'string') {
       return {
         pass: false,

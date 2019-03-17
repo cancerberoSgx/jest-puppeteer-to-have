@@ -31,7 +31,7 @@ this apply not only to Text content but also to attribute values and any textual
 
 **● asCode**: *`undefined` \| `false` \| `true`*
 
-*Defined in [toHave/types.ts:16](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L16)*
+*Defined in [toHave/types.ts:16](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L16)*
 
 ___
 <a id="caseinsensitive"></a>
@@ -40,7 +40,7 @@ ___
 
 **● caseInsensitive**: *`undefined` \| `false` \| `true`*
 
-*Defined in [toHave/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L13)*
+*Defined in [toHave/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L13)*
 
 ___
 <a id="extractas"></a>
@@ -49,7 +49,7 @@ ___
 
 **● extractAs**: *[ExtractAs](../modules/_tohave_types_.md#extractas)*
 
-*Defined in [toHave/types.ts:17](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L17)*
+*Defined in [toHave/types.ts:17](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L17)*
 
 ___
 <a id="matchpattern"></a>
@@ -58,7 +58,7 @@ ___
 
 **● matchPattern**: *`RegExp`*
 
-*Defined in [toHave/types.ts:15](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L15)*
+*Defined in [toHave/types.ts:15](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L15)*
 
 ___
 <a id="text"></a>
@@ -67,7 +67,7 @@ ___
 
 **● text**: *`undefined` \| `string`*
 
-*Defined in [toHave/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L12)*
+*Defined in [toHave/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L12)*
 
 ___
 <a id="textcomparemode"></a>
@@ -76,7 +76,7 @@ ___
 
 **● textCompareMode**: *[TextCompareMode](../modules/_tohave_types_.md#textcomparemode)*
 
-*Defined in [toHave/types.ts:14](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L14)*
+*Defined in [toHave/types.ts:14](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L14)*
 
 ___
 

@@ -79,6 +79,8 @@ TODO / IDEAS / QUESTIONS
 
 * ["toEdit/types"](modules/_toedit_types_.md)
 * ["toHave/types"](modules/_tohave_types_.md)
+* ["toTrigger/event"](modules/_totrigger_event_.md)
+* ["toTrigger/types"](modules/_totrigger_types_.md)
 
 ---
 

@@ -94,9 +94,6 @@ function eventTools() {
     fireEvent(el, 'change')
   }
 
-  // function click(el: Element){
-  //   fireEvent(el, 'click')
-  // }
   return {fireEvent, select, check}
 }
 
@@ -105,73 +102,10 @@ export const eventAuxFunctions = `
 ${eventTools.toString()}
 )()
 `
+
+/** @internal */
 export interface EventTool {
   fireEvent(node: Element, eventName: FireEventNames): void
   select(el: Element, values: string[] | string): void
   check(el: Element, checked: boolean): void
 }
-
-//  function trigger(el: HTMLElement, event: string ) {
-//   wrapper.hostNodes()
-//     // .filterWhere(w => !!w && !!w.getDOMNode())
-//     // find(wrapper)
-//     .forEach(w => {
-//       w.simulate(event, {
-//         ...clickEventAttributes,
-//         currentTarget: w.getDOMNode(),
-//         srcElement: w.getDOMNode(),
-//         target: w.getDOMNode(),
-//         toElement: w.getDOMNode(),
-//         type: event,
-//         view: window,
-
-//       });
-//     });
-//     if (!dontUpdate) {
-//       await wait(10);
-//       wrapper.update();
-//     }
-//     return wrapper;
-// }
-
-// const clickEventAttributes = {
-//   defaultPrevented: false,
-//   preventDefault() { this.defaultPrevented = true; },
-//   currentTarget: document,
-//   composed: true,
-//   which: 0,
-//   isTrusted: true,
-//   cancelBubble: false,
-//   cancelable: true,
-//   bubbles: true,
-//   returnValue: true,
-//   metaKey: null,
-//   altKey: null,
-//   ctrlKey: null,
-//   shiftKey: null,
-//   button: 0
-// };
-
-// //  function selectOne(w: ElementOrWrapper, value: string): Promise<void> {
-// //   const e = asElement<HTMLSelectElement>(w)
-
-// //   if (!e) { return }
-// //   const option = e.querySelector<HTMLOptionElement>(`[value="${value}"]`)
-// //   if (!option) {
-// //   console.warn(`select() option [value="${value}"] not found`);
-
-// //     return
-// //   }
-// //   Array.from( e.querySelectorAll('option')).forEach(o=>o.selected=false)
-// //   option.selected = true
-// //   e.selectedIndex = option.index
-// //   e.value = option.value
-
-// //   e.dispatchEvent(new Event('change'));
-// //   await wait(100)
-// // }
-
-//  function value(wrapper: ReactWrapper, value: string) {
-//   wrapper.getDOMNode().setAttribute('value', value);
-//   await change(wrapper);
-// }

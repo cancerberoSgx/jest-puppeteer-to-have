@@ -28,7 +28,7 @@
 
 **● attrs**: *`undefined` \| `object`*
 
-*Defined in [toEdit/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L13)*
+*Defined in [toEdit/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toEdit/types.ts#L13)*
 
 ___
 <a id="innerhtml"></a>
@@ -37,7 +37,7 @@ ___
 
 **● innerHTML**: *`undefined` \| `string`*
 
-*Defined in [toEdit/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L12)*
+*Defined in [toEdit/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toEdit/types.ts#L12)*
 
 ___
 <a id="parent"></a>
@@ -46,7 +46,7 @@ ___
 
 **● parent**: *`undefined` \| `string`*
 
-*Defined in [toEdit/types.ts:11](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L11)*
+*Defined in [toEdit/types.ts:11](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toEdit/types.ts#L11)*
 
 ___
 <a id="selector"></a>
@@ -55,7 +55,7 @@ ___
 
 **● selector**: *`undefined` \| `string`*
 
-*Defined in [toEdit/types.ts:9](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L9)*
+*Defined in [toEdit/types.ts:9](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toEdit/types.ts#L9)*
 
 ___
 <a id="tagname"></a>
@@ -64,7 +64,7 @@ ___
 
 **● tagName**: *`undefined` \| `string`*
 
-*Defined in [toEdit/types.ts:10](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L10)*
+*Defined in [toEdit/types.ts:10](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toEdit/types.ts#L10)*
 
 ___
 

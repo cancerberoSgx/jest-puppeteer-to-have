@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AttributeOptions | jest-puppeteer-to-have</title>
+	<title>EventTool | jest-puppeteer-to-have</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_tohave_types_.html">&quot;toHave/types&quot;</a>
+					<a href="../modules/_totrigger_event_.html">&quot;toTrigger/event&quot;</a>
 				</li>
 				<li>
-					<a href="_tohave_types_.attributeoptions.html">AttributeOptions</a>
+					<a href="_totrigger_event_.eventtool.html">EventTool</a>
 				</li>
 			</ul>
-			<h1>Interface AttributeOptions</h1>
+			<h1>Interface EventTool</h1>
 		</div>
 	</div>
 </header>
@@ -73,12 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">AttributeOptions</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="_tohave_types_.tohaveoptions.html" class="tsd-signature-type">ToHaveOptions</a>
-							</li>
-						</ul>
+						<span class="target">EventTool</span>
 					</li>
 				</ul>
 			</section>
@@ -86,64 +81,96 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Properties</h3>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tohave_types_.attributeoptions.html#attributes" class="tsd-kind-icon">attributes</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tohave_types_.attributeoptions.html#attributesmultiplicity" class="tsd-kind-icon">attributes<wbr>Multiplicity</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tohave_types_.attributeoptions.html#attributesnamed" class="tsd-kind-icon">attributes<wbr>Named</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tohave_types_.attributeoptions.html#attributesvalued" class="tsd-kind-icon">attributes<wbr>Valued</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_totrigger_event_.eventtool.html#check" class="tsd-kind-icon">check</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_totrigger_event_.eventtool.html#fireevent" class="tsd-kind-icon">fire<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_totrigger_event_.eventtool.html#select" class="tsd-kind-icon">select</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="attributes" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> attributes</h3>
-					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <a href="_tohave_types_.tohaveattribute.html" class="tsd-signature-type">ToHaveAttribute</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L38">toHave/types.ts:38</a></li>
-						</ul>
-					</aside>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="check" class="tsd-anchor"></a>
+					<h3>check</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">check<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span>, checked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L111">toTrigger/event.ts:111</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>el: <span class="tsd-signature-type">Element</span></h5>
+								</li>
+								<li>
+									<h5>checked: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="attributesmultiplicity" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> attributes<wbr>Multiplicity</h3>
-					<div class="tsd-signature tsd-kind-icon">attributes<wbr>Multiplicity<span class="tsd-signature-symbol">:</span> <a href="../modules/_tohave_types_.html#multiplicity" class="tsd-signature-type">Multiplicity</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L41">toHave/types.ts:41</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>default is anyOf</p>
-						</div>
-					</div>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="fireevent" class="tsd-anchor"></a>
+					<h3>fire<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">fire<wbr>Event<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span>, eventName<span class="tsd-signature-symbol">: </span><a href="../modules/_totrigger_event_.html#fireeventnames" class="tsd-signature-type">FireEventNames</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L109">toTrigger/event.ts:109</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <span class="tsd-signature-type">Element</span></h5>
+								</li>
+								<li>
+									<h5>eventName: <a href="../modules/_totrigger_event_.html#fireeventnames" class="tsd-signature-type">FireEventNames</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="attributesnamed" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> attributes<wbr>Named</h3>
-					<div class="tsd-signature tsd-kind-icon">attributes<wbr>Named<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L37">toHave/types.ts:37</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="attributesvalued" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> attributes<wbr>Valued</h3>
-					<div class="tsd-signature tsd-kind-icon">attributes<wbr>Valued<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L39">toHave/types.ts:39</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="select" class="tsd-anchor"></a>
+					<h3>select</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">select<span class="tsd-signature-symbol">(</span>el<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toTrigger/event.ts#L110">toTrigger/event.ts:110</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>el: <span class="tsd-signature-type">Element</span></h5>
+								</li>
+								<li>
+									<h5>values: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -159,7 +186,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_toedit_types_.html">"to<wbr>Edit/types"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_tohave_types_.html">"to<wbr>Have/types"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -168,7 +195,7 @@
 					<li class="label tsd-is-external">
 						<span>Externals</span>
 					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
+					<li class="current tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_totrigger_event_.html">"to<wbr>Trigger/event"</a>
 					</li>
 				</ul>
@@ -177,48 +204,33 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_tohave_types_.attributeoptions.html" class="tsd-kind-icon">Attribute<wbr>Options</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_totrigger_event_.eventtool.html" class="tsd-kind-icon">Event<wbr>Tool</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_tohave_types_.attributeoptions.html#attributes" class="tsd-kind-icon">attributes</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="_totrigger_event_.eventtool.html#check" class="tsd-kind-icon">check</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_tohave_types_.attributeoptions.html#attributesmultiplicity" class="tsd-kind-icon">attributes<wbr>Multiplicity</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="_totrigger_event_.eventtool.html#fireevent" class="tsd-kind-icon">fire<wbr>Event</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_tohave_types_.attributeoptions.html#attributesnamed" class="tsd-kind-icon">attributes<wbr>Named</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_tohave_types_.attributeoptions.html#attributesvalued" class="tsd-kind-icon">attributes<wbr>Valued</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="_totrigger_event_.eventtool.html#select" class="tsd-kind-icon">select</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_tohave_types_.elementselectoroptions.html" class="tsd-kind-icon">Element<wbr>Selector<wbr>Options</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/_totrigger_event_.html#fireeventnames" class="tsd-kind-icon">Fire<wbr>Event<wbr>Names</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_tohave_types_.textcompareoptions.html" class="tsd-kind-icon">Text<wbr>Compare<wbr>Options</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/_totrigger_event_.html#eventauxfunctions" class="tsd-kind-icon">event<wbr>Aux<wbr>Functions</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_tohave_types_.tohaveattribute.html" class="tsd-kind-icon">To<wbr>Have<wbr>Attribute</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-external tsd-is-not-exported">
+						<a href="../modules/_totrigger_event_.html#asarray" class="tsd-kind-icon">as<wbr>Array</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_tohave_types_.tohaveoptions.html" class="tsd-kind-icon">To<wbr>Have<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_tohave_types_.treeoptions.html" class="tsd-kind-icon">Tree<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_tohave_types_.html#extractas" class="tsd-kind-icon">Extract<wbr>As</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_tohave_types_.html#multiplicity" class="tsd-kind-icon">Multiplicity</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_tohave_types_.html#textcomparemode" class="tsd-kind-icon">Text<wbr>Compare<wbr>Mode</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external tsd-is-not-exported">
+						<a href="../modules/_totrigger_event_.html#eventtools" class="tsd-kind-icon">event<wbr>Tools</a>
 					</li>
 				</ul>
 			</nav>

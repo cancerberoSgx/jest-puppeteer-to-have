@@ -11,7 +11,7 @@
     "test": "npx jest  --config ./jest.config-puppeteer.js ",
     "test-watch": "npm run test -- --watch",
     "all": "npm run clean && npm run prettier && npm run build && npm run test && npm run docs",
-    "docs": "npx typedoc src/toHave/types.ts src/toEdit/types.ts --out docs/api &&  npx typedoc src/toHave/types.ts src/toEdit/types.ts --theme markdown --out docs/api-md",
+    "docs": "npx typedoc src/toHave/types.ts src/toEdit/types.ts src/toTrigger/types.ts --out docs/api &&  npx typedoc src/toHave/types.ts src/toEdit/types.ts src/toTrigger/types.ts --theme markdown --out docs/api-md",
     "prettier": " npx prettier  --write --arrow-parens avoid --parser typescript --use-tabs false --no-semi true --single-quote true --tab-width 2 --trailing-comma all --end-of-line lf --prose-wrap preserve --print-width 120 --no-bracket-spacing  \"src/**/*.ts\"",
     "prepare": "npm run build"
   },

@@ -29,7 +29,7 @@
 
 **Ƭ ExtractAs**: *"innerHTML" \| "outerHTML" \| "textContent" \| "innerText"*
 
-*Defined in [toHave/types.ts:8](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L8)*
+*Defined in [toHave/types.ts:8](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L8)*
 
 ___
 <a id="multiplicity"></a>
@@ -38,7 +38,7 @@ ___
 
 **Ƭ Multiplicity**: *"anyOf" \| "allOf"*
 
-*Defined in [toHave/types.ts:20](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L20)*
+*Defined in [toHave/types.ts:20](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L20)*
 
 ___
 <a id="textcomparemode"></a>
@@ -47,7 +47,7 @@ ___
 
 **Ƭ TextCompareMode**: *"toContain" \| "toBeContainedBy" \| "equals" \| "startsWith" \| "endsWith"*
 
-*Defined in [toHave/types.ts:6](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L6)*
+*Defined in [toHave/types.ts:6](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/1fa80ea/src/toHave/types.ts#L6)*
 
 ___
 
