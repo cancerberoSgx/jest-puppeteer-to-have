@@ -1,28 +1,29 @@
 import '../toHave'
-import '../../to/to'
+import '../../toEdit/to'
 
 describe('toHave', () => {
   beforeAll(async () => {
     const url = `file://${process.cwd()}/assets/static1/index.html`
     await page.goto(url)
   })
-  it('should get title', async () => {
-    expect(await page.title()).toBe('test1')
-  })
+
   beforeEach(async () => {
-    await expect(page).to({
+    await expect(page).toEdit({
       selector: 'body',
       innerHTML: '',
     })
+  })
+
+  it('should get title', async () => {
+    expect(await page.title()).toBe('test1')
   })
 
   describe('selectors', () => {
     it('not.toHave and toHave', async () => {
       await expect(page).not.toHave({selector: 'p'})
       await expect(page).not.toHave({selector: 'p', text: 'hello'})
-      await expect(page).to({
+      await expect(page).toEdit({
         create: true,
-        parent: 'body',
         tagName: 'p',
         attrs: {id: 'foo'},
         innerHTML: 'hello',
@@ -36,12 +37,11 @@ describe('toHave', () => {
     it('should wait for element', async () => {
       await expect(page).not.toHave({selector: '#t2', text: 'world'})
       setTimeout(async () => {
-        await expect(page).to({
+        await expect(page).toEdit({
           create: true,
           tagName: 'p',
           attrs: {id: 't2'},
           innerHTML: 'world',
-          parent: 'body',
         })
       }, 100)
       await expect(page).not.toHave({selector: '#t2', text: 'world'})

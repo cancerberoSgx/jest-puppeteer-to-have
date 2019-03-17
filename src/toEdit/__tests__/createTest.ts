@@ -7,6 +7,13 @@ describe('toHave selectors', () => {
     await page.goto(url)
   })
 
+  beforeEach(async () => {
+    await expect(page).toEdit({
+      selector: 'body',
+      innerHTML: '',
+    })
+  })
+
   it('should get title', async () => {
     expect(await page.title()).toBe('test1')
   })
@@ -14,8 +21,7 @@ describe('toHave selectors', () => {
   it('not.toHave and toHave and to(action:"have"', async () => {
     await expect(page).not.toHave({selector: 'div p.foo'})
     await expect(page).not.toHave({selector: 'div p.foo', text: 'foo'})
-    await expect(page).to({
-      parent: 'body',
+    await expect(page).toEdit({
       create: true,
       tagName: 'p',
       attrs: {id: 'foo'},
