@@ -1,7 +1,7 @@
 {
   "name": "jest-puppeteer-to-have",
-  "version": "0.0.1",
-  "description": "DOM selection rule-them-all, jest-puppeteer custom matcher and also for manipulation",
+  "version": "0.0.2",
+  "description": "DOM selection rule-them-all, jest-puppeteer custom matcher and also for manipulation and event simulation",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "typings": "dist/src/index.d.ts",
@@ -16,9 +16,6 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "jest": "^24.1.0",
-    "puppeteer": "^1.8.0",
-    "jest-puppeteer": "^3.5.0"
   },
   "devDependencies": {
     "@types/expect-puppeteer": "^3.3.1",
@@ -26,8 +23,11 @@
     "@types/jest-environment-puppeteer": "^4.0.0",
     "@types/puppeteer": "^1.12.1",
     "expect-puppeteer": "^3.4.0",
+    "jest": "^24.1.0",
+    "jest-puppeteer": "^3.5.0",
     "prettier": "^1.16.4",
     "ts-jest": "^24.0.0",
+    "puppeteer": "^1.8.0",
     "typedoc": "^0.13.0",
     "typedoc-plugin-markdown": "^1.1.27",
     "typescript": "^3.2.2"
