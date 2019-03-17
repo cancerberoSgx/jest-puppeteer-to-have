@@ -1,22 +1,19 @@
 import '../..'
+import { beforeEachDefault } from '../../util';
 
 describe('toHave', () => {
   beforeAll(async () => {
     const url = `file://${process.cwd()}/assets/static1/index.html`
     await page.goto(url)
   })
+  beforeEachDefault();
 
   it('should get title', async () => {
     expect(await page.title()).toBe('test1')
   })
 
   describe('selectors', () => {
-    beforeEach(async () => {
-      await expect(page).toEdit({
-        selector: 'body',
-        innerHTML: '',
-      })
-    })
+    beforeEachDefault();
     it('not.toHave and toHave', async () => {
       await expect(page).not.toHave({selector: 'p'})
       await expect(page).not.toHave({selector: 'p', text: 'hello'})
@@ -34,12 +31,8 @@ describe('toHave', () => {
   })
 
   describe('waitFor', () => {
-    beforeEach(async () => {
-      await expect(page).toEdit({
-        selector: 'body',
-        innerHTML: '',
-      })
-    })
+      beforeEachDefault();
+
     it('should wait for element', async () => {
       await expect(page).not.toHave({selector: '#t2', text: 'world'})
       setTimeout(async () => {
@@ -79,21 +72,38 @@ describe('toHave', () => {
     })
   })
 
-  xdescribe('attributes', () => {
-    beforeEach(async () => {
-      await expect(page).toEdit({
-        selector: 'body',
-        innerHTML: '',
+  describe('attributes', () => {
+      beforeEachDefault();
+      it('should assert on attribute', async () => {
+        await expect(page).toEdit({
+          create: true,
+          innerHTML: `<p id="i1">`,
+        })
+        await expect(page).not.toHave({
+          selector: '#i1',
+          attributes: [[{name:'foo', value:'i1'}]],
+        })
+        await expect(page).not.toHave({
+          selector: '#i1',
+          attributes: [[{name:'id', value:'foo'}]],
+        })
+        await expect(page).toHave({
+          selector: '#i1',
+          attributes: [[{name:'id', value:'i1'}]],
+        })
       })
-    })
     it('should assert on named attribute', async () => {
       await expect(page).toEdit({
         create: true,
-        innerHTML: `<input id="i1" type="checkbox">`,
+        innerHTML: `<p id="i2">`,
       })
       await expect(page).not.toHave({
-        selector: '#i1',
-        attributesNamed: ['checked'],
+        selector: '#i2',
+        attributesNamed: [['foo']],
+      })
+      await expect(page).toHave({
+        selector: '#i2',
+        attributesNamed: [['id']],
       })
     })
   })

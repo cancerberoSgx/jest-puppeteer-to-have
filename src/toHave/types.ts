@@ -28,13 +28,14 @@ interface ElementSelectorOptions {
   /** default is anyOf. Note that you can resolve "noneOf" using not() */
   selectorMultiplicity?: Multiplicity // TODO
 }
-
+/**@internal */
+export interface ToHaveAttribute {
+  name: string
+  value: string
+}
 interface AttributeOptions {
-  attributesNamed?: string[] //TODO
-  attributes?: {
-    name: string
-    value: string
-  }[] //TODO
+  attributesNamed?: string[][] //TODO
+  attributes?: ToHaveAttribute[][] //TODO
   attributesValued?: string[] //TODO
   /** default is anyOf */
   attributesMultiplicity?: Multiplicity //TODO

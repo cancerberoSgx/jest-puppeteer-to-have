@@ -47,7 +47,7 @@ export class ToTrigger {
 
       // if(r) {
       return {
-        pass: this.context.isNot ? !!r : !r,
+        pass:  !r,
         message: () => `expect page to check element "${options.selector}" ${r ? `thrown "${r}"` : ''}`,
       }
       // }
@@ -72,7 +72,7 @@ export class ToTrigger {
       )
 
       return {
-        pass: this.context.isNot ? !!r : !r,
+        pass:   !r,
         message: () =>
           `expect page to fire event ${options.event} on element "${options.selector}" ${r ? `thrown "${r}"` : ''}`,
       }

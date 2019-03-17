@@ -48,7 +48,7 @@ export class ToEdit {
     }, changeOpts)
 
     return {
-      pass: this.context.isNot ? !!r : !r,
+      pass: !r,
       message: () =>
         `expected page ${this.context.isNot ? 'not ' : ''}to create element ${JSON.stringify(
           options,
