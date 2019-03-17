@@ -20,6 +20,8 @@ export interface TextCompareOptions {
 type Multiplicity = 'anyOf' | 'allOf'
 
 interface ElementSelectorOptions {
+  /** parent.querySelectorAll() or use document if not given */
+  parent?: string
   selector: string
   matchElementCount?(n: number): boolean
   matchElementCountDescription?: string
@@ -40,7 +42,7 @@ interface AttributeOptions {
 
 /** TODO: */
 interface TreeOptions {
-  parent?: ToHaveOptions // TODO
+  // parent?: ToHaveOptions // TODO
   children?: ToHaveOptions // TODO
   sibling?: ToHaveOptions // TODO
   descendant?: ToHaveOptions // TODO

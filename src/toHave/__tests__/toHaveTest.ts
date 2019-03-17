@@ -1,4 +1,4 @@
-import '../toHave'
+import '../..'
 import '../../toEdit/toEdit'
 
 describe('toHave', () => {
@@ -30,6 +30,8 @@ describe('toHave', () => {
       })
       await expect(page).toHave({selector: 'p'})
       await expect(page).toHave({selector: 'p', text: 'hello'})
+      await expect(page).not.toHave({selector: 'p', text: 'hello2'})
+      await expect(page).not.toHave({selector: 'span'})
     })
   })
 
@@ -46,6 +48,30 @@ describe('toHave', () => {
       }, 100)
       await expect(page).not.toHave({selector: '#t2', text: 'world'})
       await expect(page).toHave({selector: '#t2', text: 'world', waitFor: true})
+      await expect(page).toHave({selector: '#t2', text: 'world'})
+    })
+
+    it('should wait for element to be hidden if using with .not', async () => {
+      await expect(page).not.toHave({selector: '[data-id="foo"]', text: 'seba'})
+      await expect(page).toEdit({
+        create: true,
+        tagName: 'span',
+        attrs: {'data-id': 'foo'},
+        innerHTML: 'seba',
+      })
+      await expect(page).toHave({selector: '[data-id="foo"]', text: 'seba'})
+      setTimeout(async () => {
+        await expect(page).toEdit({
+          selector: '[data-id="foo"]',
+          remove: true,
+        })
+      }, 100)
+      async function f() {
+        await expect(page).not.toHave({selector: '[data-id="foo"]', text: 'seba'})
+      }
+      await expect(page).toHave({selector: '[data-id="foo"]', text: 'seba'})
+      await expect(page).not.toHave({selector: '[data-id="foo"]', text: 'seba', waitFor: true})
+      await expect(page).not.toHave({selector: '[data-id="foo"]', text: 'seba'})
     })
   })
 })

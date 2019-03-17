@@ -1,4 +1,4 @@
-import '../../toHave/toHave'
+import '../../'
 import '../toEdit'
 
 describe('toHave selectors', () => {
