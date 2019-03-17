@@ -1,6 +1,5 @@
-// import '../to'
-import '../toHave/toHave'
-import '../to'
+import '../toHave'
+import '../../to/to'
 
 describe('toHave selectors', () => {
 

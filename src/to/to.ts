@@ -1,6 +1,6 @@
 import { Page } from 'puppeteer';
-import { ToHave } from './toHave/toHave';
-import { ToHaveOptions } from './toHave/types';
+import { ToHave } from '../toHave/toHave';
+import { ToOptions } from './types';
 
 declare global {
   namespace jest {
@@ -8,15 +8,6 @@ declare global {
       to(options: ToOptions): R
     }
   }
-}
-
-interface ToOptions extends Partial<ToHaveOptions>, Partial<ToEditOptions> {
-  action: 'have' | 'edit' | 'trigger'
-}
-
-interface ToEditOptions {
-  editMode: 'create' | 'remove' | 'replace' | 'change'
-  create?: { tagName?: string, parent?: string, innerHTML?: string, attrs?: { [a: string]: string } }
 }
 
 /** 
