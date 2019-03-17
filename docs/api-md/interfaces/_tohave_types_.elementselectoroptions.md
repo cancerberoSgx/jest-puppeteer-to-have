@@ -31,7 +31,7 @@
 
 **● matchElementCountDescription**: *`undefined` \| `string`*
 
-*Defined in [toHave/types.ts:27](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L27)*
+*Defined in [toHave/types.ts:27](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L27)*
 
 ___
 <a id="parent"></a>
@@ -40,7 +40,7 @@ ___
 
 **● parent**: *`undefined` \| `string`*
 
-*Defined in [toHave/types.ts:24](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L24)*
+*Defined in [toHave/types.ts:24](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L24)*
 
 parent.querySelectorAll() or use document if not given
 
@@ -51,7 +51,7 @@ ___
 
 **● selector**: *`string`*
 
-*Defined in [toHave/types.ts:25](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L25)*
+*Defined in [toHave/types.ts:25](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L25)*
 
 ___
 <a id="selectormultiplicity"></a>
@@ -60,7 +60,7 @@ ___
 
 **● selectorMultiplicity**: *[Multiplicity](../modules/_tohave_types_.md#multiplicity)*
 
-*Defined in [toHave/types.ts:29](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L29)*
+*Defined in [toHave/types.ts:29](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L29)*
 
 default is anyOf. Note that you can resolve "noneOf" using not()
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **matchElementCount**(n: *`number`*): `boolean`
 
-*Defined in [toHave/types.ts:26](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L26)*
+*Defined in [toHave/types.ts:26](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L26)*
 
 **Parameters:**
 

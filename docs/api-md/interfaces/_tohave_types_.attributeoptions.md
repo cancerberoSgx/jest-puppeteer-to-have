@@ -25,9 +25,9 @@
 
 ### `<Optional>` attributes
 
-**● attributes**: *`object`[]*
+**● attributes**: *[ToHaveAttribute](_tohave_types_.tohaveattribute.md)[][]*
 
-*Defined in [toHave/types.ts:34](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L34)*
+*Defined in [toHave/types.ts:38](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L38)*
 
 ___
 <a id="attributesmultiplicity"></a>
@@ -36,7 +36,7 @@ ___
 
 **● attributesMultiplicity**: *[Multiplicity](../modules/_tohave_types_.md#multiplicity)*
 
-*Defined in [toHave/types.ts:40](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L40)*
+*Defined in [toHave/types.ts:41](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L41)*
 
 default is anyOf
 
@@ -45,9 +45,9 @@ ___
 
 ### `<Optional>` attributesNamed
 
-**● attributesNamed**: *`string`[]*
+**● attributesNamed**: *`string`[][]*
 
-*Defined in [toHave/types.ts:33](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L33)*
+*Defined in [toHave/types.ts:37](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L37)*
 
 ___
 <a id="attributesvalued"></a>
@@ -56,7 +56,7 @@ ___
 
 **● attributesValued**: *`string`[]*
 
-*Defined in [toHave/types.ts:38](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L38)*
+*Defined in [toHave/types.ts:39](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toHave/types.ts#L39)*
 
 ___
 

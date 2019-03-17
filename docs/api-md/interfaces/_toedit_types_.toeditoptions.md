@@ -32,7 +32,7 @@
 
 **● appendChildren**: *[ElementOptions](_toedit_types_.elementoptions.md)[]*
 
-*Defined in [toEdit/types.ts:2](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L2)*
+*Defined in [toEdit/types.ts:2](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L2)*
 
 ___
 <a id="appendtoparent"></a>
@@ -41,7 +41,7 @@ ___
 
 **● appendToParent**: *`undefined` \| `string`*
 
-*Defined in [toEdit/types.ts:4](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L4)*
+*Defined in [toEdit/types.ts:4](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L4)*
 
 ___
 <a id="attrs"></a>
@@ -52,7 +52,7 @@ ___
 
 *Inherited from [ElementOptions](_toedit_types_.elementoptions.md).[attrs](_toedit_types_.elementoptions.md#attrs)*
 
-*Defined in [toEdit/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L13)*
+*Defined in [toEdit/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L13)*
 
 ___
 <a id="create"></a>
@@ -61,7 +61,7 @@ ___
 
 **● create**: *`undefined` \| `false` \| `true`*
 
-*Defined in [toEdit/types.ts:5](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L5)*
+*Defined in [toEdit/types.ts:5](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L5)*
 
 ___
 <a id="innerhtml"></a>
@@ -72,7 +72,7 @@ ___
 
 *Inherited from [ElementOptions](_toedit_types_.elementoptions.md).[innerHTML](_toedit_types_.elementoptions.md#innerhtml)*
 
-*Defined in [toEdit/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L12)*
+*Defined in [toEdit/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L12)*
 
 ___
 <a id="parent"></a>
@@ -83,7 +83,7 @@ ___
 
 *Inherited from [ElementOptions](_toedit_types_.elementoptions.md).[parent](_toedit_types_.elementoptions.md#parent)*
 
-*Defined in [toEdit/types.ts:11](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L11)*
+*Defined in [toEdit/types.ts:11](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L11)*
 
 ___
 <a id="remove"></a>
@@ -92,7 +92,7 @@ ___
 
 **● remove**: *`undefined` \| `true`*
 
-*Defined in [toEdit/types.ts:3](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L3)*
+*Defined in [toEdit/types.ts:3](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L3)*
 
 ___
 <a id="selector"></a>
@@ -103,7 +103,7 @@ ___
 
 *Inherited from [ElementOptions](_toedit_types_.elementoptions.md).[selector](_toedit_types_.elementoptions.md#selector)*
 
-*Defined in [toEdit/types.ts:9](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L9)*
+*Defined in [toEdit/types.ts:9](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L9)*
 
 ___
 <a id="tagname"></a>
@@ -114,7 +114,7 @@ ___
 
 *Inherited from [ElementOptions](_toedit_types_.elementoptions.md).[tagName](_toedit_types_.elementoptions.md#tagname)*
 
-*Defined in [toEdit/types.ts:10](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toEdit/types.ts#L10)*
+*Defined in [toEdit/types.ts:10](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/b64ec82/src/toEdit/types.ts#L10)*
 
 ___
 

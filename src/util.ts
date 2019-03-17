@@ -8,6 +8,6 @@ export function beforeEachDefault() {
     await expect(page).toEdit({
       selector: 'body',
       innerHTML: '',
-    });
-  });
+    })
+  })
 }

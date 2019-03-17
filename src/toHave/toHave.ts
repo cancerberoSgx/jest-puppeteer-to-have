@@ -1,7 +1,7 @@
 import {Page} from 'puppeteer'
 import {shorter} from '../util'
 import {ToHaveOptions, ExtractAs, ToHaveAttribute} from './types'
-import { compareText, compareWithMultiplicity } from './toHaveUtil';
+import {compareText, compareWithMultiplicity} from './toHaveUtil'
 
 export class ToHave {
   constructor(protected context: jest.MatcherUtils) {}
@@ -14,7 +14,6 @@ export class ToHave {
       return result
     }
 
-    // EVALUATE - element information extraction
     const r = await this.evaluate(page, options)
 
     result = await this.assertEvaluateResult(page, options, r)
@@ -23,7 +22,7 @@ export class ToHave {
     }
 
     if (typeof r === 'string') {
-      throw ''
+      return null as any
     } // just for cheat typescript
 
     result = await this.assertAttributes(page, options, r)
@@ -41,11 +40,13 @@ export class ToHave {
     }
   }
 
+  /** basic undefined and element count matching */
   private async assertEvaluateResult(
     page: Page,
     options: ToHaveOptions,
     r: string | EvaluateResultElement[],
   ): Promise<jest.CustomMatcherResult | undefined> {
+
     if (typeof r === 'string') {
       return {
         pass: false,
@@ -55,7 +56,7 @@ export class ToHave {
           }" but it thrown "${r}"`,
       }
     }
-    // basic undefined and element count matching
+
     if (!r || (!r.length && !options.matchElementCount)) {
       return {
         pass: false,
@@ -80,68 +81,60 @@ export class ToHave {
     options: ToHaveOptions,
     r: EvaluateResultElement[],
   ): Promise<jest.CustomMatcherResult | undefined> {
-    if (options.attributes||options.attributesNamed) {
-      const actual= options.attributes ? r.map(e=>e.attrs) :  r.map(e=>e.attrs.map(a=>a.name))
-      const expected = options.attributes ? options.attributes:options.attributesNamed
+    if (options.attributes || options.attributesNamed) {
+      const actual = options.attributes ? r.map(e => e.attrs) : r.map(e => e.attrs.map(a => a.name))
+      const expected = options.attributes ? options.attributes : options.attributesNamed
 
-      type T = ToHaveAttribute|undefined|string
-      const pass = compareWithMultiplicity<T[]>(actual, expected, (actual2, expected2)=>{
-        const predicate = (actual:T, expected:T, options: ToHaveOptions)=>{  
-          if ((actual === undefined && expected !== undefined) || (actual !== undefined && expected === undefined)) {
-          return false;
-        }
-        if (actual === expected) {
-          return true;
-        }
-        // if(actual===undefined){throw 'TypeScript cheat shouldnt happen'}
-        // if(expected===undefined){throw 'TypeScript cheat shouldnt happen'}
-        if(options.attributes){
-          return compareText((actual! as ToHaveAttribute).name, (expected!as ToHaveAttribute).name, options, this.context.isNot) && compareText((actual! as ToHaveAttribute).value, (expected!as ToHaveAttribute).value, options, this.context.isNot)
-          }
-else {
-              return compareText((actual as string), (expected as string), options, this.context.isNot) && compareText((actual as string), (expected as string)!, options, this.context.isNot)
+      type T = ToHaveAttribute | undefined | string
+      const pass = compareWithMultiplicity<T[]>(
+        actual,
+        expected,
+        (actual2, expected2) => {
+          const predicate = (actual: T, expected: T, options: ToHaveOptions) => {
+            if ((actual === undefined && expected !== undefined) || (actual !== undefined && expected === undefined)) {
+              return false
             }
-        }
-        const pass2 = compareWithMultiplicity(actual2, expected2, predicate, options, this.context.isNot)
-        return pass2        
-      }, options, this.context.isNot)
-        return {
-          pass,
-          message: () =>
-            `expected page ${this.context.isNot ? 'not ' : ''}to have an element "${options.selector}" containing any attributes of ${JSON.stringify(
-              options.attributes!,
-            )}" but instead " ${JSON.stringify(r.map(e => e.attrs))}" were found`,
-        }
+            if (actual === expected) {
+              return true
+            }
+            if (options.attributes) {
+              return (
+                compareText(
+                  (actual! as ToHaveAttribute).name,
+                  (expected! as ToHaveAttribute).name,
+                  options,
+                  this.context.isNot,
+                ) &&
+                compareText(
+                  (actual! as ToHaveAttribute).value,
+                  (expected! as ToHaveAttribute).value,
+                  options,
+                  this.context.isNot,
+                )
+              )
+            } else {
+              return (
+                compareText(actual as string, expected as string, options, this.context.isNot) &&
+                compareText(actual as string, (expected as string)!, options, this.context.isNot)
+              )
+            }
+          }
+          const pass2 = compareWithMultiplicity(actual2, expected2, predicate, options, this.context.isNot)
+          return pass2
+        },
+        options,
+        this.context.isNot,
+      )
+      return {
+        pass,
+        message: () =>
+          `expected page ${this.context.isNot ? 'not ' : ''}to have an element "${
+            options.selector
+          }" containing any attributes of ${JSON.stringify(options.attributes!)}" but instead " ${JSON.stringify(
+            r.map(e => e.attrs),
+          )}" were found`,
       }
-    // }
-    // if (options.attributesNamed) {
-    //   const actual= r.map(e=>e.attrs.map(a=>a.name))
-    //   const expected = options.attributesNamed
-
-    //   const pass = compareWithMultiplicity(actual, expected, (actual2, expected2)=>{
-    //     const predicate = (actual:ToHaveAttribute|undefined, expected:ToHaveAttribute|undefined, options: ToHaveOptions)=>{  if ((actual === undefined && expected !== undefined) || (actual !== undefined && expected === undefined)) {
-    //       return false;
-    //     }
-    //     if (actual === expected) {
-    //       return true;
-    //     }
-    //     if(actual===undefined){throw 'TypeScript cheat shouldnt happen'}
-    //     if(expected===undefined){throw 'TypeScript cheat shouldnt happen'}
-    //     return           compareText(actual.name, expected.name, options) && compareText(actual.value, expected.value, options)
-    //     }
-    //     const pass2 = compareWithMultiplicity(actual2, expected2, predicate, options)
-    //     return pass2
-        
-    //   }, options) 
-    //     return {
-    //       pass: this.context.isNot ? !!r : !r,
-    //       message: () =>
-    //         `expected page to have an element "${options.selector}" containing any attributes of ${JSON.stringify(
-    //           options.attributes!,
-    //         )}" but instead " ${JSON.stringify(r.map(e => e.attrs))}" were found`,
-    //     }
-
-    // }
+    }
   }
 
   /**
@@ -156,46 +149,15 @@ else {
   ): Promise<jest.CustomMatcherResult | undefined> {
     //
     if (options.text) {
-      let expected = [options.text] // buildText(options.text, options)
-      const actual = r.map(e => e.text) //.join(' ')//buildText(r.map(e => e.text).join(' '), options)
-      // if (options.textCompareMode === 'equals') {
+      let expected = [options.text]
+      const actual = r.map(e => e.text)
       const pass = compareWithMultiplicity(actual, expected, compareText, options, this.context.isNot)
-      // if (expected !== actual) {
       return {
         pass: pass,
         message: () =>
           `expected page to have an element "${options.selector}" with text "${options.textCompareMode ||
             'equals'}" to "${expected}" but "${actual}" was found instead`,
       }
-      // } else {
-      //   return {
-      //     pass: true,
-      //     message: () =>
-      //       `expected page not to have an element "${options.selector}" with text equals to "${expected}"`,
-      //   }
-      // }
-      // } else if (!options.textCompareMode || options.textCompareMode === 'toContain') {
-      //   if (!actual.includes(expected)) {
-      //     return {
-      //       pass: false,
-      //       message: () =>
-      //         `expected page to have an element "${
-      //           options.selector
-      //         }" text including "${expected}" but "${actual}" was found instead `,
-      //     }
-      //   } else {
-      //     return {
-      //       pass: true,
-      //       message: () =>
-      //         `expected page not to have an element "${options.selector}" with text including "${expected}"`,
-      //     }
-      //   }
-      // } else {
-      //   return {
-      //     pass: false,
-      //     message: () => `Matcher toHave() implementation is not finished yet`,
-      //   }
-      // }
     }
   }
 
@@ -217,6 +179,7 @@ else {
     }
   }
 
+  /** extract element information extraction */
   private async evaluate(page: Page, options: ToHaveOptions): EvaluateResult {
     return await page.evaluate(
       (selector: string, extractAs: ExtractAs, parent?: string) => {

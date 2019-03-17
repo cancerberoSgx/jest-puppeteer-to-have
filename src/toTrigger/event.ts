@@ -50,7 +50,6 @@ function eventTools() {
       }
       const event = doc.createEvent(eventClass)
       event.initEvent(eventName, true, true) // All events created as bubbling and cancelable.
-
       ;(event as any).synthetic = true // allow detection of synthetic events
       // The second parameter says go ahead with the default action
       //@ts-ignore

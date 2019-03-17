@@ -11,32 +11,12 @@ export class ToTrigger {
         selector: options.selector,
         check: options.check!,
       }
-      // if(el.checked && !opts.check || !el.checked&&opts.check){
-      //     el.click()
-      //   }
       const r = await page.evaluate(
         (opts: typeof eventOptions, auxFns) => {
           try {
             const tool: EventTool = eval(auxFns)
-            // const a = 1 as any as HTMLInputElement
-
             const el = document.querySelector<HTMLInputElement>(opts.selector)!
             tool.check(el, opts.check)
-
-            // return el ? ( el.innerHTML+'sebabab') : 'nbononono'
-            // if(el.checked && !opts.check || !el.checked&&opts.check){
-            //   el.click()
-            // }
-            // el.checked=opts.check
-            // if(opts.check){
-            //   el.setAttribute('checked', 'checked')
-            // }
-            // else {
-            //   el.removeAttribute('checked')
-            // }
-            // tool.fireEvent(el, 'change')
-            // el.blur()
-            // el.click()
           } catch (error) {
             return error + ''
           }
@@ -45,17 +25,14 @@ export class ToTrigger {
         eventAuxFunctions,
       )
 
-      // if(r) {
       return {
-        pass:  !r,
+        pass: !r,
         message: () => `expect page to check element "${options.selector}" ${r ? `thrown "${r}"` : ''}`,
       }
-      // }
     }
     if (options.event) {
       const eventOptions = {
         selector: options.selector,
-        // select: options.select|| [],
         event: options.event!,
       }
       const r = await page.evaluate(
@@ -72,7 +49,7 @@ export class ToTrigger {
       )
 
       return {
-        pass:   !r,
+        pass: !r,
         message: () =>
           `expect page to fire event ${options.event} on element "${options.selector}" ${r ? `thrown "${r}"` : ''}`,
       }

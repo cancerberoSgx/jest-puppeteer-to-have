@@ -1,5 +1,5 @@
 import '../../'
-import { beforeEachDefault } from '../../util';
+import {beforeEachDefault} from '../../util'
 
 describe('toTrigger', () => {
   beforeAll(async () => {
@@ -19,7 +19,7 @@ describe('toTrigger', () => {
   })
 
   describe('click', () => {
-      beforeEachDefault();
+    beforeEachDefault()
 
     it('should not throw', async () => {
       await expect(page).toTrigger({
@@ -48,8 +48,7 @@ describe('toTrigger', () => {
   })
 
   describe('check', () => {
-      beforeEachDefault();
-
+    beforeEachDefault()
 
     it('should execute onchange handler', async () => {
       await expect(page).toEdit({
