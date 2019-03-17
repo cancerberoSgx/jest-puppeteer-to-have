@@ -4,3 +4,6 @@ node_modules
 src
 dist/**/__tests__
 tsconfig.json
+assets
+bkps
+tmp

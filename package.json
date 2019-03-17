@@ -1,7 +1,7 @@
 {
   "name": "jest-puppeteer-to-have",
   "version": "0.0.2",
-  "description": "DOM selection rule-them-all, jest-puppeteer custom matcher",
+  "description": "DOM selection rule-them-all, jest-puppeteer custom matcher and also for manipulation",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "typings": "dist/src/index.d.ts",

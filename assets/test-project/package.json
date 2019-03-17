@@ -1,0 +1,20 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest  --config ./jest.config-puppeteer.js"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "jest-puppeteer": "^3.5.0",
+    "jest-puppeteer-to-have": "file:../../jest-puppeteer-to-have-0.0.2.tgz",
+    "puppeteer": "^1.8.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
