@@ -10,7 +10,7 @@
     "clean": "rm -rf dist",
     "test": "npx jest  --config ./jest.config-puppeteer.js ",
     "test-watch": "npm run test -- --watch",
-    "all": "npm run clean && npm run build && npm run test", 
+    "all": "npm run clean && npm run prettier && npm run build && npm run test", 
     "prettier": " npx prettier  --write --arrow-parens avoid --parser typescript --use-tabs false --no-semi true --single-quote true --tab-width 2 --trailing-comma all --end-of-line lf  --print-width 120  \"src/**/*.ts\"",
     "prepare": "npm run build"
   },
