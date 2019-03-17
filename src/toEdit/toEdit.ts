@@ -1,18 +1,9 @@
 import {Page} from 'puppeteer'
 import {ToEditOptions} from './types'
 
-declare global {
-  namespace jest {
-    interface Matchers<R> {
-      toEdit(options: ToEditOptions): R
-    }
-  }
-}
+export class ToEdit {
+  constructor(protected context: jest.MatcherUtils) {}
 
-/**
- * more general than toHave yet. This is mostly for testing toHave purposes - create els, trigger events, etc. Perhaps n future we can join them all to a even more generic tool
- * */
-expect.extend({
   async toEdit(page: Page, options: ToEditOptions) {
     const selector = options.selector
     if (!selector && !options.create) {
@@ -57,11 +48,11 @@ expect.extend({
     }, changeOpts)
 
     return {
-      pass: this.isNot ? !!r : !r,
+      pass: this.context.isNot ? !!r : !r,
       message: () =>
-        `expected page ${this.isNot ? 'not ' : ''}to create element ${JSON.stringify(
+        `expected page ${this.context.isNot ? 'not ' : ''}to create element ${JSON.stringify(
           options,
         )} without errors but got "${r}"`,
     }
-  },
-})
+  }
+}
