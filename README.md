@@ -9,3 +9,7 @@ DOM selection rule-them-all, jest-puppeteer custom matcher.
 * Has options to configure element selection and text extraction and value comparison. 
 * The only required configuration property is "selector".
 * Passed on this other more-meaningful expects can be easily built, so is not an objective to have a simple/clear API but to be flexible enough for implement most cases with a single call
+
+## TODO / IDEAS / QUESTIONS
+
+ * should we support events (i.e expect(page).toClick()...)

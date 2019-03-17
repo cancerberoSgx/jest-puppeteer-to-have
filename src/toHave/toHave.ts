@@ -1,5 +1,5 @@
 import { Page } from 'puppeteer'
-import { shorter } from './util';
+import { shorter } from '../util';
 import { ToHaveOptions, TextCompareOptions, ExtractAs } from './types';
 
 declare global {
@@ -37,15 +37,12 @@ function buildValue(text: string, options: TextCompareOptions) {
   }
   return text
 }
-
-// const f : jest.MatcherUtils
-class ToHave {
+export class ToHave {
   constructor(protected context: jest.MatcherUtils) {
 
   }
 
   async toHave(page: Page, options: ToHaveOptions) {
-
     if (options.waitFor) {
       const waitForSelector = typeof options.waitFor === 'string' ? options.waitFor : options.selector
         try {
@@ -114,7 +111,7 @@ class ToHave {
       // TODO. join several elements test configuration ? 
       const actual = buildValue(r.map(e => e.text).join(' '), options) //TODO: support multiplicity - we are not supporting nothing with this!
 
-      if (options.verb === 'equals') {
+      if (options.textCompareMode === 'equals') {
         if (expected != actual) {
           return {
             pass: false,
@@ -128,7 +125,7 @@ class ToHave {
           }
         }
       }
-      else if (!options.verb || options.verb === 'toContain') {
+      else if (!options.textCompareMode || options.textCompareMode === 'toContain') {
         if (!actual.includes(expected)) {
           return {
             pass: false,

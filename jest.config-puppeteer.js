@@ -3,7 +3,7 @@ module.exports = {
   "globalSetup": "jest-environment-puppeteer/setup",
   "globalTeardown": "jest-environment-puppeteer/teardown",
   "testEnvironment": "jest-environment-puppeteer",
-  "testRegex": "__tests__/.*\.*PuppeteerTest\.[t]sx?$",
+  "testRegex": "__tests__/.*Test\.ts$",
   // "testRegex": "/src/__tests__/functional/.*[^d]\.tsx?$",
   "runInBand": true,
 

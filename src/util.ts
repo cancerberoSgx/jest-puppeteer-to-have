@@ -1,4 +1,8 @@
-import { CSSProperties } from 'react';
+export function shorter(s: string, l = 20) {
+  s = typeof s !== 'string' ? (s + '') : s
+  const postFix = s.length > l ? '...' : ''
+  return `"${s.trim().substring(0, Math.min(s.length, l))}${postFix}"`
+}
 
 // export function query<T extends HTMLElement= HTMLElement>(s: string): T {
 //   return document.querySelector<T>(s)!
@@ -12,11 +16,6 @@ import { CSSProperties } from 'react';
 //   return html.replace(/\&/g, '&amp;').replace(/\</g, '&lt;').replace(/\>/g, '&gt;').trim()
 // }
 
-export function shorter(s: string, l = 20) {
-  s = typeof s !== 'string' ? (s + '') : s
-  const postFix = s.length > l ? '...' : ''
-  return `"${s.trim().substring(0, Math.min(s.length, l))}${postFix}"`
-}
 
 // export function tryTo<F extends (...args: any[]) => any>(f: F): ReturnType<F> | undefined {
 //   try {

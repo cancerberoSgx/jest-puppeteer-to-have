@@ -1,15 +1,15 @@
 {  
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,  
     "outDir": "./dist",
     "rootDir": ".",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    // "skipLibCheck": true,
     "declaration": true,
     "sourceMap": true,
-    "strict": true,  
   },
   "include": [
     "src"
