@@ -5,7 +5,4 @@ build
 *.log
 tmp
 bkps
-docs
-docs/*.gz
-src-removeme
 *.tgz
