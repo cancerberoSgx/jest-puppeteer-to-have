@@ -16,7 +16,7 @@
 
 * [ExtractAs](_tohave_types_.md#extractas)
 * [Multiplicity](_tohave_types_.md#multiplicity)
-* [Verb](_tohave_types_.md#verb)
+* [TextCompareMode](_tohave_types_.md#textcomparemode)
 
 ---
 
@@ -28,7 +28,7 @@
 
 **Ƭ ExtractAs**: *"innerHTML" \| "outerHTML" \| "textContent" \| "innerText"*
 
-*Defined in [toHave/types.ts:8](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L8)*
+*Defined in [toHave/types.ts:8](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L8)*
 
 ___
 <a id="multiplicity"></a>
@@ -37,16 +37,16 @@ ___
 
 **Ƭ Multiplicity**: *"anyOf" \| "allOf"*
 
-*Defined in [toHave/types.ts:20](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L20)*
+*Defined in [toHave/types.ts:20](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L20)*
 
 ___
-<a id="verb"></a>
+<a id="textcomparemode"></a>
 
-###  Verb
+###  TextCompareMode
 
-**Ƭ Verb**: *"toContain" \| "toBeContainedBy" \| "equals" \| "startsWith" \| "endsWith"*
+**Ƭ TextCompareMode**: *"toContain" \| "toBeContainedBy" \| "equals" \| "startsWith" \| "endsWith"*
 
-*Defined in [toHave/types.ts:6](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L6)*
+*Defined in [toHave/types.ts:6](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L6)*
 
 ___
 

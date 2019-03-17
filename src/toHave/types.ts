@@ -1,9 +1,9 @@
 export interface ToHaveOptions extends TextCompareOptions, ElementSelectorOptions, AttributeOptions, TreeOptions {
   /** call `page.waitFor` before selecting. if a string that selector will be used on the call, and "selector" otherwise. If isNot then we wait for the elements matching selector to be hidden. */
-  waitFor?: boolean | string
+  waitForSelector?: boolean | string
 }
 
-type Verb = 'toContain' | 'toBeContainedBy' | 'equals' | 'startsWith' | 'endsWith'
+type TextCompareMode = 'toContain' | 'toBeContainedBy' | 'equals' | 'startsWith' | 'endsWith'
 
 export type ExtractAs = 'innerHTML' | 'outerHTML' | 'textContent' | 'innerText'
 
@@ -11,7 +11,7 @@ export type ExtractAs = 'innerHTML' | 'outerHTML' | 'textContent' | 'innerText'
 export interface TextCompareOptions {
   text?: string
   caseInsensitive?: boolean
-  textCompareMode?: Verb // WIP
+  textCompareMode?: TextCompareMode // WIP
   matchPattern?: RegExp //TODO
   asCode?: boolean
   extractAs?: ExtractAs

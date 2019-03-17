@@ -36,7 +36,7 @@
 * [sibling](_tohave_types_.tohaveoptions.md#sibling)
 * [text](_tohave_types_.tohaveoptions.md#text)
 * [textCompareMode](_tohave_types_.tohaveoptions.md#textcomparemode)
-* [waitFor](_tohave_types_.tohaveoptions.md#waitfor)
+* [waitForSelector](_tohave_types_.tohaveoptions.md#waitforselector)
 
 ### Methods
 
@@ -54,7 +54,7 @@
 
 *Inherited from [TreeOptions](_tohave_types_.treeoptions.md).[ancestor](_tohave_types_.treeoptions.md#ancestor)*
 
-*Defined in [toHave/types.ts:49](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L49)*
+*Defined in [toHave/types.ts:49](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L49)*
 
 ___
 <a id="ascode"></a>
@@ -65,7 +65,7 @@ ___
 
 *Inherited from [TextCompareOptions](_tohave_types_.textcompareoptions.md).[asCode](_tohave_types_.textcompareoptions.md#ascode)*
 
-*Defined in [toHave/types.ts:16](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L16)*
+*Defined in [toHave/types.ts:16](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L16)*
 
 ___
 <a id="attributes"></a>
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [AttributeOptions](_tohave_types_.attributeoptions.md).[attributes](_tohave_types_.attributeoptions.md#attributes)*
 
-*Defined in [toHave/types.ts:34](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L34)*
+*Defined in [toHave/types.ts:34](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L34)*
 
 ___
 <a id="attributesmultiplicity"></a>
@@ -87,7 +87,7 @@ ___
 
 *Inherited from [AttributeOptions](_tohave_types_.attributeoptions.md).[attributesMultiplicity](_tohave_types_.attributeoptions.md#attributesmultiplicity)*
 
-*Defined in [toHave/types.ts:40](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L40)*
+*Defined in [toHave/types.ts:40](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L40)*
 
 default is anyOf
 
@@ -100,7 +100,7 @@ ___
 
 *Inherited from [AttributeOptions](_tohave_types_.attributeoptions.md).[attributesNamed](_tohave_types_.attributeoptions.md#attributesnamed)*
 
-*Defined in [toHave/types.ts:33](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L33)*
+*Defined in [toHave/types.ts:33](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L33)*
 
 ___
 <a id="attributesvalued"></a>
@@ -111,7 +111,7 @@ ___
 
 *Inherited from [AttributeOptions](_tohave_types_.attributeoptions.md).[attributesValued](_tohave_types_.attributeoptions.md#attributesvalued)*
 
-*Defined in [toHave/types.ts:38](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L38)*
+*Defined in [toHave/types.ts:38](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L38)*
 
 ___
 <a id="caseinsensitive"></a>
@@ -122,7 +122,7 @@ ___
 
 *Inherited from [TextCompareOptions](_tohave_types_.textcompareoptions.md).[caseInsensitive](_tohave_types_.textcompareoptions.md#caseinsensitive)*
 
-*Defined in [toHave/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L13)*
+*Defined in [toHave/types.ts:13](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L13)*
 
 ___
 <a id="children"></a>
@@ -133,7 +133,7 @@ ___
 
 *Inherited from [TreeOptions](_tohave_types_.treeoptions.md).[children](_tohave_types_.treeoptions.md#children)*
 
-*Defined in [toHave/types.ts:46](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L46)*
+*Defined in [toHave/types.ts:46](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L46)*
 
 ___
 <a id="descendant"></a>
@@ -144,7 +144,7 @@ ___
 
 *Inherited from [TreeOptions](_tohave_types_.treeoptions.md).[descendant](_tohave_types_.treeoptions.md#descendant)*
 
-*Defined in [toHave/types.ts:48](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L48)*
+*Defined in [toHave/types.ts:48](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L48)*
 
 ___
 <a id="extractas"></a>
@@ -155,7 +155,7 @@ ___
 
 *Inherited from [TextCompareOptions](_tohave_types_.textcompareoptions.md).[extractAs](_tohave_types_.textcompareoptions.md#extractas)*
 
-*Defined in [toHave/types.ts:17](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L17)*
+*Defined in [toHave/types.ts:17](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L17)*
 
 ___
 <a id="matchelementcountdescription"></a>
@@ -166,7 +166,7 @@ ___
 
 *Inherited from [ElementSelectorOptions](_tohave_types_.elementselectoroptions.md).[matchElementCountDescription](_tohave_types_.elementselectoroptions.md#matchelementcountdescription)*
 
-*Defined in [toHave/types.ts:27](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L27)*
+*Defined in [toHave/types.ts:27](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L27)*
 
 ___
 <a id="matchpattern"></a>
@@ -177,7 +177,7 @@ ___
 
 *Inherited from [TextCompareOptions](_tohave_types_.textcompareoptions.md).[matchPattern](_tohave_types_.textcompareoptions.md#matchpattern)*
 
-*Defined in [toHave/types.ts:15](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L15)*
+*Defined in [toHave/types.ts:15](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L15)*
 
 ___
 <a id="parent"></a>
@@ -188,7 +188,7 @@ ___
 
 *Inherited from [ElementSelectorOptions](_tohave_types_.elementselectoroptions.md).[parent](_tohave_types_.elementselectoroptions.md#parent)*
 
-*Defined in [toHave/types.ts:24](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L24)*
+*Defined in [toHave/types.ts:24](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L24)*
 
 parent.querySelectorAll() or use document if not given
 
@@ -201,7 +201,7 @@ ___
 
 *Inherited from [ElementSelectorOptions](_tohave_types_.elementselectoroptions.md).[selector](_tohave_types_.elementselectoroptions.md#selector)*
 
-*Defined in [toHave/types.ts:25](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L25)*
+*Defined in [toHave/types.ts:25](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L25)*
 
 ___
 <a id="selectormultiplicity"></a>
@@ -212,7 +212,7 @@ ___
 
 *Inherited from [ElementSelectorOptions](_tohave_types_.elementselectoroptions.md).[selectorMultiplicity](_tohave_types_.elementselectoroptions.md#selectormultiplicity)*
 
-*Defined in [toHave/types.ts:29](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L29)*
+*Defined in [toHave/types.ts:29](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L29)*
 
 default is anyOf. Note that you can resolve "noneOf" using not()
 
@@ -225,7 +225,7 @@ ___
 
 *Inherited from [TreeOptions](_tohave_types_.treeoptions.md).[sibling](_tohave_types_.treeoptions.md#sibling)*
 
-*Defined in [toHave/types.ts:47](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L47)*
+*Defined in [toHave/types.ts:47](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L47)*
 
 ___
 <a id="text"></a>
@@ -236,27 +236,27 @@ ___
 
 *Inherited from [TextCompareOptions](_tohave_types_.textcompareoptions.md).[text](_tohave_types_.textcompareoptions.md#text)*
 
-*Defined in [toHave/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L12)*
+*Defined in [toHave/types.ts:12](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L12)*
 
 ___
 <a id="textcomparemode"></a>
 
 ### `<Optional>` textCompareMode
 
-**● textCompareMode**: *[Verb](../modules/_tohave_types_.md#verb)*
+**● textCompareMode**: *[TextCompareMode](../modules/_tohave_types_.md#textcomparemode)*
 
 *Inherited from [TextCompareOptions](_tohave_types_.textcompareoptions.md).[textCompareMode](_tohave_types_.textcompareoptions.md#textcomparemode)*
 
-*Defined in [toHave/types.ts:14](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L14)*
+*Defined in [toHave/types.ts:14](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L14)*
 
 ___
-<a id="waitfor"></a>
+<a id="waitforselector"></a>
 
-### `<Optional>` waitFor
+### `<Optional>` waitForSelector
 
-**● waitFor**: *`boolean` \| `string`*
+**● waitForSelector**: *`boolean` \| `string`*
 
-*Defined in [toHave/types.ts:3](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L3)*
+*Defined in [toHave/types.ts:3](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L3)*
 
 call `page.waitFor` before selecting. if a string that selector will be used on the call, and "selector" otherwise. If isNot then we wait for the elements matching selector to be hidden.
 
@@ -272,7 +272,7 @@ ___
 
 *Inherited from [ElementSelectorOptions](_tohave_types_.elementselectoroptions.md).[matchElementCount](_tohave_types_.elementselectoroptions.md#matchelementcount)*
 
-*Defined in [toHave/types.ts:26](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L26)*
+*Defined in [toHave/types.ts:26](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L26)*
 
 **Parameters:**
 

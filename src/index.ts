@@ -1,4 +1,6 @@
 import './toEdit/install'
 import './toHave/install'
+import './toTrigger/install'
 export {ToHaveOptions} from './toHave/types'
 export {ToEditOptions} from './toEdit/types'
+export {ToTriggerOptions} from './toTrigger/types'

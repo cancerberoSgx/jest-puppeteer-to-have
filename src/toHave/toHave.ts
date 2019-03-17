@@ -2,7 +2,7 @@ import {Page} from 'puppeteer'
 import {shorter} from '../util'
 import {ToHaveOptions, TextCompareOptions, ExtractAs} from './types'
 
-function buildValue(text: string, options: TextCompareOptions) {
+function buildText(text: string, options: TextCompareOptions) {
   if (options.caseInsensitive) {
     text = text.toLowerCase()
   }
@@ -10,6 +10,44 @@ function buildValue(text: string, options: TextCompareOptions) {
     text = text.replace(/\s+/g, ' ').trim()
   }
   return text
+}
+
+function compareText(actual: string | undefined, expected: string | undefined, options: ToHaveOptions) {
+  if ((actual === undefined && expected !== undefined) || (actual !== undefined && expected === undefined)) {
+    return false
+  }
+  if (actual === expected) {
+    return true
+  }
+  actual = buildText(actual!, options)
+  expected = buildText(expected!, options)
+  if (!options.textCompareMode || options.textCompareMode === 'toContain') {
+    return actual.includes(expected)
+  } else if (options.textCompareMode === 'equals') {
+    return actual === expected
+  } else if (options.textCompareMode === 'toBeContainedBy') {
+    return expected.includes(actual)
+  } else if (options.textCompareMode === 'endsWith') {
+    return actual.endsWith(expected)
+  } else if (options.textCompareMode === 'startsWith') {
+    return actual.startsWith(expected)
+  } else {
+    return false
+  }
+}
+function compareWithMultiplicity<T>(
+  actual: (T | undefined)[],
+  expected: (T | undefined)[],
+  predicate: (actual: T | undefined, expected: T | undefined, options: ToHaveOptions) => boolean,
+  options: ToHaveOptions,
+) {
+  if (!options.selectorMultiplicity || options.selectorMultiplicity === 'anyOf') {
+    return !!actual.find(a => !!expected.find(e => predicate(a, e, options)))
+  } else if (options.selectorMultiplicity === 'allOf') {
+    return !!actual.find(a => !!expected.find(e => !predicate(a, e, options)))
+  } else {
+    return false
+  }
 }
 
 export class ToHave {
@@ -96,8 +134,7 @@ export class ToHave {
             a =>
               !!options.attributes!.find(
                 expected =>
-                  a.name.toLowerCase() === expected.name.toLowerCase() &&
-                  a.value.toLowerCase() === expected.value.toLowerCase(),
+                  compareText(expected.name, a.name, options) && compareText(expected.value, a.value, options),
               ),
           ),
       )
@@ -109,6 +146,10 @@ export class ToHave {
               options.attributes!,
             )}" but instead " ${JSON.stringify(r.map(e => e.attrs))}" were found`,
         }
+      }
+    }
+    if (options.attributesNamed) {
+      if (!options.attributesMultiplicity || options.attributesMultiplicity === 'anyOf') {
       }
     }
   }
@@ -125,52 +166,53 @@ export class ToHave {
   ): Promise<jest.CustomMatcherResult | undefined> {
     //
     if (options.text) {
-      let expected = buildValue(options.text, options)
-      const actual = buildValue(r.map(e => e.text).join(' '), options)
-      if (options.textCompareMode === 'equals') {
-        if (expected != actual) {
-          return {
-            pass: false,
-            message: () =>
-              `expected page to have an element "${
-                options.selector
-              }" with text equals to "${expected}" but "${actual}" was found instead`,
-          }
-        } else {
-          return {
-            pass: true,
-            message: () =>
-              `expected page not to have an element "${options.selector}" with text equals to "${expected}"`,
-          }
-        }
-      } else if (!options.textCompareMode || options.textCompareMode === 'toContain') {
-        if (!actual.includes(expected)) {
-          return {
-            pass: false,
-            message: () =>
-              `expected page to have an element "${
-                options.selector
-              }" text including "${expected}" but "${actual}" was found instead `,
-          }
-        } else {
-          return {
-            pass: true,
-            message: () =>
-              `expected page not to have an element "${options.selector}" with text including "${expected}"`,
-          }
-        }
-      } else {
-        return {
-          pass: false,
-          message: () => `Matcher toHave() implementation is not finished yet`,
-        }
+      let expected = [options.text] // buildText(options.text, options)
+      const actual = r.map(e => e.text) //.join(' ')//buildText(r.map(e => e.text).join(' '), options)
+      // if (options.textCompareMode === 'equals') {
+      const pass = compareWithMultiplicity(actual, expected, compareText, options)
+      // if (expected !== actual) {
+      return {
+        pass: pass,
+        message: () =>
+          `expected page to have an element "${options.selector}" with text "${options.textCompareMode ||
+            'equals'}" to "${expected}" but "${actual}" was found instead`,
       }
+      // } else {
+      //   return {
+      //     pass: true,
+      //     message: () =>
+      //       `expected page not to have an element "${options.selector}" with text equals to "${expected}"`,
+      //   }
+      // }
+      // } else if (!options.textCompareMode || options.textCompareMode === 'toContain') {
+      //   if (!actual.includes(expected)) {
+      //     return {
+      //       pass: false,
+      //       message: () =>
+      //         `expected page to have an element "${
+      //           options.selector
+      //         }" text including "${expected}" but "${actual}" was found instead `,
+      //     }
+      //   } else {
+      //     return {
+      //       pass: true,
+      //       message: () =>
+      //         `expected page not to have an element "${options.selector}" with text including "${expected}"`,
+      //     }
+      //   }
+      // } else {
+      //   return {
+      //     pass: false,
+      //     message: () => `Matcher toHave() implementation is not finished yet`,
+      //   }
+      // }
     }
   }
 
+  /** TODO: should not only wait for selector, but also for attributes, text and everything else */
   private async waitFor(page: Page, options: ToHaveOptions): Promise<jest.CustomMatcherResult | undefined> {
-    if (options.waitFor) {
-      const waitForSelector = typeof options.waitFor === 'string' ? options.waitFor : options.selector
+    if (options.waitForSelector) {
+      const waitForSelector = typeof options.waitForSelector === 'string' ? options.waitForSelector : options.selector
       try {
         await page.waitFor(waitForSelector, {hidden: this.context.isNot})
       } catch (error) {

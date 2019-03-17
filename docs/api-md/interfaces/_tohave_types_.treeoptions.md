@@ -29,7 +29,7 @@ TODO:
 
 **● ancestor**: *[ToHaveOptions](_tohave_types_.tohaveoptions.md)*
 
-*Defined in [toHave/types.ts:49](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L49)*
+*Defined in [toHave/types.ts:49](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L49)*
 
 ___
 <a id="children"></a>
@@ -38,7 +38,7 @@ ___
 
 **● children**: *[ToHaveOptions](_tohave_types_.tohaveoptions.md)*
 
-*Defined in [toHave/types.ts:46](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L46)*
+*Defined in [toHave/types.ts:46](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L46)*
 
 ___
 <a id="descendant"></a>
@@ -47,7 +47,7 @@ ___
 
 **● descendant**: *[ToHaveOptions](_tohave_types_.tohaveoptions.md)*
 
-*Defined in [toHave/types.ts:48](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L48)*
+*Defined in [toHave/types.ts:48](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L48)*
 
 ___
 <a id="sibling"></a>
@@ -56,7 +56,7 @@ ___
 
 **● sibling**: *[ToHaveOptions](_tohave_types_.tohaveoptions.md)*
 
-*Defined in [toHave/types.ts:47](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/77ec3b4/src/toHave/types.ts#L47)*
+*Defined in [toHave/types.ts:47](https://github.com/cancerberoSgx/jest-puppeteer-to-have/blob/a7ee247/src/toHave/types.ts#L47)*
 
 ___
 
