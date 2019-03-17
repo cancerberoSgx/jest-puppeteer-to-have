@@ -54,9 +54,17 @@ describe('test', ()=>{
 
 ## API
 
- * [ToHaveOptions](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_tohave_types_.tohaveoptions.html)
- * [ToEditOptions](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_toedit_types_.toeditoptions.html)
+### ToHaveOptions
+
+ * [ToHaveOptions (html)](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_tohave_types_.tohaveoptions.html)
+ * [ToHaveOptions (markdown)](docs/api-md/interfaces/_tohave_types_.tohaveoptions.md)
  
+### ToEditOptions
+
+ * [ToEditOptions (html)](https://cancerberosgx.github.io/jest-puppeteer-to-have/api/interfaces/_toedit_types_.toeditoptions.html)
+ * [ToEditOptions (markdown)](docs/api-md/interfaces/_toedit_types_.toeditoptions.md)
+
+
 
 ## TODO / IDEAS / QUESTIONS
 
