@@ -17,30 +17,32 @@ export interface TextCompareOptions {
   extractAs?: ExtractAs
 }
 
+type Multiplicity = 'anyOf' | 'allOf'
+
 interface ElementSelectorOptions {
   selector: string
   matchElementCount?(n: number): boolean
   matchElementCountDescription?: string
   /** default is anyOf. Note that you can resolve "noneOf" using not() */
-  selectorMultiplicity?: 'anyOf' | 'allOf' // TODO
+  selectorMultiplicity?: Multiplicity // TODO
 }
 
 interface AttributeOptions {
-  toHaveAttributesNamed?: string[] //TODO
-  toHaveAttributes?: {
+  attributesNamed?: string[] //TODO
+  attributes?: {
     name: string
     value: string
   }[] //TODO
-  toHaveAttributesValued?: string[] //TODO
+  attributesValued?: string[] //TODO
   /** default is anyOf */
-  toHaveAttributesMultiplicity?: 'anyOf' | 'allOf' //TODO
+  attributesMultiplicity?: Multiplicity //TODO
 }
 
 /** TODO: */
 interface TreeOptions {
-  toHaveParent?: ToHaveOptions // TODO
-  toHaveChildren?: ToHaveOptions // TODO
-  toHaveSibling?: ToHaveOptions // TODO
-  toHaveDescendant?: ToHaveOptions // TODO
-  toHaveAncestor?: ToHaveOptions // TODO
+  parent?: ToHaveOptions // TODO
+  children?: ToHaveOptions // TODO
+  sibling?: ToHaveOptions // TODO
+  descendant?: ToHaveOptions // TODO
+  ancestor?: ToHaveOptions // TODO
 }

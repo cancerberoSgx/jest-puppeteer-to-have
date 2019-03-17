@@ -106,12 +106,12 @@ export class ToHave {
     }
 
     // attribute comparision - WIP - only anyOf and exact - case insentitive comparission supported
-    if (options.toHaveAttributes) {
+    if (options.attributes) {
       const pass = r.find(
         e =>
           !!e.attrs.find(
             a =>
-              !!options.toHaveAttributes!.find(
+              !!options.attributes!.find(
                 expected =>
                   a.name.toLowerCase() === expected.name.toLowerCase() &&
                   a.value.toLowerCase() === expected.value.toLowerCase(),
@@ -123,7 +123,7 @@ export class ToHave {
           pass: false,
           message: () =>
             `expected page to have an element "${options.selector}" containing any attributes of ${JSON.stringify(
-              options.toHaveAttributes!,
+              options.attributes!,
             )}" but instead " ${JSON.stringify(r.map(e => e.attrs))}" were found`,
         }
       }
