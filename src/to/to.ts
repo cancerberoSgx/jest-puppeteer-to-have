@@ -1,6 +1,6 @@
-import { Page } from 'puppeteer';
-import { ToHave } from '../toHave/toHave';
-import { ToOptions } from './types';
+import { Page } from 'puppeteer'
+import { ToHave } from '../toHave/toHave'
+import { ToOptions } from './types'
 
 declare global {
   namespace jest {
@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-/** 
+/**
  * more general than toHave yet. This is mostly for testing toHave purposes - create els, trigger events, etc. Perhaps n future we can join them all to a even more generic tool
  * */
 expect.extend({
@@ -18,19 +18,21 @@ expect.extend({
     if (options.action === 'have') {
       const toHave = new ToHave(this)
       const selector = options.selector
-      if(!selector){
+      if (!selector) {
         throw 'have action requires selector option'
       }
-      return toHave.toHave(page, {...options, selector})
-    }
-    else if (options.action === 'edit') {
+      return toHave.toHave(page, { ...options, selector })
+    } else if (options.action === 'edit') {
       if (options.editMode === 'create') {
-        const createOptions = { ...{ tagName: 'div', parent: 'body', innerHTML: '', attrs: {} }, ...options.create || {} }
-        const r = await page.evaluate((e) => {
+        const createOptions = {
+          ...{ tagName: 'div', parent: 'body', innerHTML: '', attrs: {} },
+          ...(options.create || {}),
+        }
+        const r = await page.evaluate(e => {
           try {
             const d = document.createElement(e.tagName)
             d.innerHTML = e.innerHTML
-            Object.entries(e.attrs).forEach(a => d.setAttribute(a[0], a[1]));
+            Object.entries(e.attrs).forEach(a => d.setAttribute(a[0], a[1]))
             document.querySelector(e.parent).appendChild(d)
           } catch (error) {
             return error + ''
@@ -39,18 +41,15 @@ expect.extend({
         }, createOptions)
         return {
           pass: this.isNot ? !!r : !r,
-          message: `expected page ${this.isNot ? 'not ' : ''}to create element ${JSON.stringify(options)}`
+          message: `expected page ${this.isNot ? 'not ' : ''}to create element ${JSON.stringify(options)}`,
         }
-      }
-      else {
+      } else {
         throw `edit mode ${options.editMode} not impl yet`
       }
-    }
-    else if (options.action === 'trigger') {
+    } else if (options.action === 'trigger') {
       throw `action trigger not impl yet`
-    }
-    else {
+    } else {
       throw `action ${options.action} invalid`
     }
-  }
+  },
 })
